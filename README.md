@@ -4,7 +4,7 @@
 
 <!-- badges: end -->
 
-The goal of electioncalc is to ...
+The goal of electioncalc is to facilitate the calculation of seat allocation for each political party in a legislative election. Currently, it only includes the D'Hondt method, but it will soon incorporate other well-known methods such as Sainte-Laguë, Imperiali, and others.
 
 ## Installation
 
