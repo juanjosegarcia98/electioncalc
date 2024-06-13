@@ -11,12 +11,24 @@ The goal of electioncalc is to facilitate the calculation of seat allocation for
 You can install the development version of electioncalc like so:
 
 ``` r
-devtools::install_github("juanjosegarcia98/electioncalc")
+# install devtools package if it's not already
+if (!requireNamespace("devtools", quietly = TRUE)) {
+  install.packages("devtools")
+}
+
+# load devtools package in your environment
+library(devtools)
+
+# use the install_github() function from devtools to download and install electioncalc from this repo
+install_github("juanjosegarcia98/electioncalc")
+
+# load electioncalc in your environment
+library(electioncalc)
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to use the `allocate_seats_dhondt()` function:
 
 ``` r
 library(electioncalc)
@@ -34,4 +46,7 @@ allocate_seats_dhondt(
   seats_to_allocate = 35,
   votes_threshold = 0.03
 )
+# RETURNS:
+# Party A Party B Party C Party D Party E 
+#      15      15       2       2       1 
 ```
